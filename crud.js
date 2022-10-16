@@ -1,37 +1,14 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-require('dotenv').config();
-require('./config/database');
+const Profile = require('./model');
 
-const userSchema = new mongoose.Schema ({
-    name: String,
-    googleId: {
-      type: String,
-      required: true
-    },
-    email: String,
-    avatar: String
-  }, {
-    timestamps: true
-});
+module.exports = {
+    createProfile,
+};
 
-const profileSchema = new Schema ({
-    user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    name: String,
-    picture: String,
-    age: Number,
-    location: String,
-    genderIdentity: {
-        type: String,
-        enum: ['Female', 'Male', 'Trans Masc', 'Trans Femme', 'Non-Binary', 'Prefer Not To Say']
-    },
-    pronouns: {
-        type: String,
-        enum: ['she/her', 'he/him', 'they/them', 'she/they', 'he/they', 'All', 'Not Specified Here']
-    }, 
-    hobbies: String,
-    aboutMe: String,
-});
-
-module.exports = mongoose.model('Profile', profileSchema);
-module.exports = mongoose.model('User', userSchema);
+function createProfile(req,res){
+    let profile = new Profile(req.body);
+    profile.save(function(err) {
+        if (err) return res.redirect('/profile');
+        res.redirect('/profile');
+      });
+    console.log(req.body);
+}
