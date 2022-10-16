@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('profile');
 });
 router.post('/', function(req, res, next){
-    let profile = new profileModel({
+    let profile = new Profile({
         name: req.body.name,
         age: req.body.age,
         location: req.body.location,
@@ -15,10 +15,8 @@ router.post('/', function(req, res, next){
         hobbies: req.body.hobbies,
         aboutMe: req.body.aboutMe,
     });
-    profile.save(function(err,req1){
-        if(err) throw err;
-        res.render('profile', { title: 'Profile', success:'Profile Updated' });
-    });
+    profile.save();
+    res.redirect('/profile');
 });
 
 module.exports = router;

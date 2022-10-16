@@ -22,36 +22,50 @@
     </nav>
     <h1>Profile Page</h1>
     <p><img src="<%= user.avatar %>" referrerpolicy="no-referrer"></img></p>
-        <form autoComplete="off" method="post" action="/profile">
-            <label>Name</label>
-            <input type="text" name="name" value="<%= user.name %>" required />
-            <label>Age</label>
-            <input type="number" name="age" required />
-            <label>Location</label>
-            <input type="text" name="location" required />
-            <label>Gender Identity</label>
-            <select name="genderIdentity">
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Trans Masc">Trans Masc</option>
-                <option value="Trans Femme">Trans Femme</option>
-                <option value="Non-Binary">Non-Binary</option>
-                <option value="Prefer Not To Say">Prefer Not To Say</option>
-            </select>
-            <label>Pronouns</label>
-            <select name="pronouns">
-                <option value="she/her">she/her</option>
-                <option value="he/him">he/him</option>
-                <option value="they/them">they/them</option>
-                <option value="she/they">she/they</option>
-                <option value="he/they">he/they</option>
-                <option value="All">All</option>
-                <option value="Not Specified Here">Not Specified Here</option>
-            </select>
-            <label>Hobbies</label>
-            <input type="text" name="hobbies"></input>
-            <label>About Me:</label>
-            <input type="text" name="aboutMe">
+        <form autoComplete="off" method="post" action="/profile" class="container">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" type="text" name="name" value="<%= user.name %>" required />
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input class="form-control" type="number" name="age" required />
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input class="form-control" type="text" name="location" required />
+            </div>
+            <div class="form-group">
+                <label>Gender Identity</label>
+                <select class="form-control" name="genderIdentity">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Trans Masc">Trans Masc</option>
+                    <option value="Trans Femme">Trans Femme</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                    <option value="Prefer Not To Say">Prefer Not To Say</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Pronouns</label>
+                <select class="form-control" name="pronouns">
+                    <option value="she/her">she/her</option>
+                    <option value="he/him">he/him</option>
+                    <option value="they/them">they/them</option>
+                    <option value="she/they">she/they</option>
+                    <option value="he/they">he/they</option>
+                    <option value="All">All</option>
+                    <option value="Not Specified Here">Not Specified Here</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Hobbies</label>
+                <input class="form-control" type="text" name="hobbies"></input>
+            </div>
+            <div class="form-group">
+                <label>About Me:</label>
+                <input class="form-control" type="text" name="aboutMe">
+            </div>
             <button type="submit">Save</button>
         </form>
   </body>
