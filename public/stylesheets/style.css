@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -8,14 +9,36 @@ a {
 }
 
 /* --- Nav Bar ---*/
+a:hover {
+    width: 30vw;
+    height: 4vw;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2vw;
+    letter-spacing: 0.1em;
+    color: #e8e8e8;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: linear-gradient(45deg,#d350db,teal,#d350db);
+    background-size: 400% 400%;
+    box-shadow: .25vw .25vw 0 #d350db;
+  }
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2vw;
+    letter-spacing: 0.1em;
+    box-shadow: .25vw .25vw 0 #d350db;
+  }
 
 nav {
-  background-color: #9932CC;
+  background-image: linear-gradient(to bottom right, #00FFFF, #FF69B4);
   color: white;
   width: 100%;
   position: fixed;
   top: 0;
-  height: 3rem;
+  height: 3.75rem;
   text-align: left;
   border-bottom: .5rem solid white;
   padding-left: .5rem;
@@ -23,7 +46,54 @@ nav {
   padding-top: .5rem;
 }
 
-nav>a {
+/* --- Home Page Body ---*/
+
+.wrap {
+  max-width: 75%;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #00FFFF, #FF69B4);
+  padding: 6px;
+  margin-left: 6rem;
+  margin-top: 3rem;
+}
+
+.home {
+  background: #222;
   color: white;
-  text-decoration: none;
+  padding: 2rem;
+}
+
+.appName {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 84px;
+}
+
+.tagLine {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+}
+
+/* --- Profile Page --- */
+
+.profile {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.profpic {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+img {
+  border-radius: 50%;
 }

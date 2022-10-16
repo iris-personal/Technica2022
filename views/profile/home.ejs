@@ -11,6 +11,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
   </head>
   <body>
+    
     <nav>
       <% if (user) { %>
         <ul class="nav nav-tabs">
@@ -24,14 +25,42 @@
       <% } else { %>
         <ul class="nav nav-tabs">
           <li class="nav-item">
-           <a class="nav-link active" aria-current="page" href="/auth/google" class="login">LOG IN WITH GOOGLE</a>
+           <a class="hover" aria-current="page" href="/auth/google" class="login">LOG IN WITH GOOGLE</a>
           </li>
         </ul>
       <% } %>
     </nav>
-    <div class="wrap"><div class="home">
-      <h1 class="appName">Friendly</h1>
-      <p class="tagLine">You deserve happiness. Your friendships should reflect that.</p>
-    </div></div>
+    <h1 class="profile">Profile Page</h1>
+    <p class="profpic"><img src="<%= user.avatar %>" referrerpolicy="no-referrer"></img></p>
+            <div class="form-group">
+                <label>Name</label>
+                <p class="form-control" type="text" name="name"><%= profile.name %></p>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <p class="form-control" type="number" name="age" />
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <p class="form-control" type="text" name="location" />
+            </div>
+            <div class="form-group">
+                <label>Gender Identity</label>
+                <p class="form-control" name="genderIdentity" />
+            </div>
+            <div class="form-group">
+                <label>Pronouns</label>
+                <p class="form-control" name="pronouns" />
+            </div>
+            <div class="form-group">
+                <label>Hobbies</label>
+                <p class="form-control" type="text" name="hobbies" />
+            </div>
+            <div class="form-group">
+                <label>About Me:</label>
+                <p class="form-control" type="text" name="aboutMe" />
+            </div>
+            <button>Update</button>
+        </form>
   </body>
 </html>
