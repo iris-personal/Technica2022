@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* --- Nav Bar ---*/
+
+nav {
+  background-color: #9932CC;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 3rem;
+  text-align: left;
+  border-bottom: .5rem solid white;
+  padding-left: .5rem;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
+
+nav>a {
+  color: white;
+  text-decoration: none;
+}
